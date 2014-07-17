@@ -68,6 +68,7 @@ RUN /src/installext.sh https://github.com/bestpractical/rt-extension-resetpasswo
 RUN /src/installext.sh https://github.com/bestpractical/rt-extension-activityreports
 RUN /src/installext.sh https://github.com/bestpractical/rt-extension-spawnlinkedticketinqueue
 RUN /src/installext.sh https://github.com/bestpractical/rt-extension-commandbymail
+RUN /src/installext.sh https://github.com/bestpractical/rt-extension-assets
 RUN /src/installext.sh https://github.com/bestpractical/rt-extension-repeatticket
 RUN cp /src/rt-extension-repeatticket/bin/rt-repeat-ticket /opt/rt4/sbin
 RUN mkdir -p /opt/rt4/local/html/Callbacks/MyCallbacks/Elements/MakeClicky

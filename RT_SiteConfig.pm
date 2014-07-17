@@ -19,6 +19,7 @@ Plugin( "RT::Extension::ActivityReports" );
 Plugin( "RT::Extension::ResetPassword" );
 Plugin( "RT::Extension::MergeUsers" );
 Plugin( "RT::Extension::SpawnLinkedTicketInQueue" );
+Plugin( "RT::Extension::Assets");
 
 Plugin( "RT::Extension::CommandByMail" );
 Set( @MailPlugins, qw(Auth::MailFrom Filter::TakeAction) );
