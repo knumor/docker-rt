@@ -15,6 +15,12 @@ cd /src/rt-extension-repeatticket
   --package RT::Extension::RepeatTicket
 cd -
 
+# Initialise database for assets extension
+cd /src/rt-extension-assets
+perl Makefile.PL
+make
+make initdb
+
 # Set up full text indexing
 yes '' |
 /opt/rt4/sbin/rt-setup-fulltext-index \
