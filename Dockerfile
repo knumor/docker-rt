@@ -49,6 +49,7 @@ RUN make -C /src/${RT} install
 ADD ./scripts/rtcron /usr/bin/rtcron
 ADD ./scripts/rtinit /usr/bin/rtinit
 ADD ./scripts/rtxinit /usr/bin/rtxinit
+ADD ./scripts/rtupgrade /usr/bin/rtupgrade
 
 # Add system service config
 ADD ./etc/nginx.conf /etc/nginx/nginx.conf

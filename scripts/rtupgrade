@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+# Upgrade database
+/opt/rt4/sbin/rt-setup-database --action upgrade
