@@ -15,6 +15,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
   gnupg \
   graphviz \
   libexpat1-dev \
+  libgd-perl \
   libgd2-noxpm-dev \
   libpq-dev \
   nginx-light \
