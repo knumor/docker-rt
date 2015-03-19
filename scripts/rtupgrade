@@ -3,4 +3,5 @@
 set -e
 
 # Upgrade database
+cd /src/rt
 /opt/rt4/sbin/rt-setup-database --action upgrade
