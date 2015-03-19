@@ -18,6 +18,8 @@ Set( %GnuPG, Enable => 0 );
 Plugin( "RT::Extension::ResetPassword" );
 Plugin( "RT::Extension::MergeUsers" );
 
+### xtraplugins ###
+
 Set( %FullTextSearch,
     Enable     => 1,
     Indexed    => 1,
