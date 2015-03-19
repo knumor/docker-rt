@@ -15,19 +15,8 @@ Set( $DatabasePassword, $ENV{DATABASE_PASSWORD} || "rt_pass" );
 # GnuPG support requires extra work downstream to enable
 Set( %GnuPG, Enable => 0 );
 
-Plugin( "RT::Extension::ActivityReports" );
 Plugin( "RT::Extension::ResetPassword" );
 Plugin( "RT::Extension::MergeUsers" );
-Plugin( "RT::Extension::SpawnLinkedTicketInQueue" );
-Plugin( "RT::Extension::Assets");
-
-Plugin( "RT::Extension::CommandByMail" );
-Set( @MailPlugins, qw(Auth::MailFrom Filter::TakeAction) );
-
-Plugin( "RT::Extension::RepeatTicket" );
-Set( $RepeatTicketCoexistentNumber, 1 );
-Set( $RepeatTicketLeadTime, 14 );
-Set( $RepeatTicketSubjectFormat, '__Subject__' );
 
 Set( %FullTextSearch,
     Enable     => 1,

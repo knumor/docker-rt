@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+# Initialise database for assets extension
+#cd /src/rt-extension-assets
+#/opt/rt4/sbin/rt-setup-database \
+#  --action insert \
+#  --datadir etc \
+#  --datafile etc/initialdata \
+#  --skip-create \
+#  --package RT::Extension::Assets
+
+# Set up full text indexing
+yes '' |
+/opt/rt4/sbin/rt-setup-fulltext-index \
+  --dba rt4 \
+  --dba-password "$DATABASE_PASSWORD"
