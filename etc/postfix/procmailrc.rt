@@ -4,7 +4,7 @@ LOGFILE=/var/log/procmail/rt.log
 #Messages >300000 characters proceed to recipient (unlikely to be spam)
 :0w
 * > 300000
-| rt-mailgate --queue $QUEUE --action $ACTION --url http://WEB_DOMAIN/
+| rt-mailgate --queue "$QUEUE" --action $ACTION --url http://WEB_DOMAIN/
 
 :0w
 * ^X-RT-Loop-Prevention: example.org
@@ -22,4 +22,4 @@ LOGFILE=/var/log/procmail/rt.log
 
 #if the spam trigger is not fired then send to expected destination
 :0w
-| rt-mailgate --queue $QUEUE --action $ACTION --url http://WEB_DOMAIN/
+| rt-mailgate --queue "$QUEUE" --action $ACTION --url http://WEB_DOMAIN/
