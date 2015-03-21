@@ -20,12 +20,16 @@ Plugin( "RT::Extension::MergeUsers" );
 
 ### xtraplugins ###
 
-Set( %FullTextSearch,
-    Enable     => 1,
-    Indexed    => 1,
-    Column     => 'ContentIndex',
-    Table      => 'Attachments',
-);
+
+# Enable full text search
+if ($ENV{USE_FTS}) {
+    Set( %FullTextSearch,
+        Enable     => 1,
+        Indexed    => 1,
+        Column     => 'ContentIndex',
+        Table      => 'Attachments',
+    );
+}
 
 Set( @Active_MakeClicky, qw(httpurl_overwrite short_ticket_link) );
 

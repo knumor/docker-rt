@@ -12,7 +12,9 @@ set -e
 #  --package RT::Extension::Assets
 
 # Set up full text indexing
+if [ ! -z "$USE_FTS"]; then
 yes '' |
 /opt/rt4/sbin/rt-setup-fulltext-index \
   --dba rt4 \
   --dba-password "$DATABASE_PASSWORD"
+fi
